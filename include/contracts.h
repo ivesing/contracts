@@ -170,11 +170,12 @@ public:
 #endif // __cplusplus
 
 
-static
+static inline
 void
 __contracts_assert_failed(const char *file, size_t line, const char *msg)
 {
-	fprintf(stderr, "*** assertion failed at %s:%u\n%s\n", file, line, msg);
+	fprintf(stderr, "*** assertion failed at %s:%lu\n%s\n", file,
+	        (unsigned long) line, msg);
 	abort();
 }
 
