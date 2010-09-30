@@ -168,8 +168,9 @@ __contracts_assert_failed(const char *file, size_t line, const char *msg)
 }
 #endif // H_CONTRACTS
 
-// contracts.h peut-être inclue plusieurs avec des options différentes (NDEBUG,
-// EXDEBUG), il faut donc réinitialiser les macros qui peuvent avoir changées.
+// contracts.h peut-être inclu plusieurs fois avec des options différentes
+// (NDEBUG, EXDEBUG), il faut donc réinitialiser les macros qui peuvent avoir
+// changées.
 #ifdef if_else_debug
 #  undef if_else_debug
 #  undef CONTRACTS_ASSERT
