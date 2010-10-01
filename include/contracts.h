@@ -131,7 +131,7 @@ public:
  * 'ex'.
  *
  * Exemple :
- *   std:vector<int> v;
+ *   std::vector<int> v;
  *   assert_exception(v.at(2) = 3, std::out_of_range);
  *
  * @param code Le code à exécuter.
@@ -162,7 +162,7 @@ static inline
 void
 __contracts_assert_failed(const char *file, size_t line, const char *msg)
 {
-	fprintf(stderr, "*** assertion failed at %s:%lu\n%s\n", file,
+	fprintf(stderr, "\n*** assertion failed at %s:%lu\n    %s\n\n", file,
 	        (unsigned long) line, msg);
 	abort();
 }
